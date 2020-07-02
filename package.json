@@ -1,0 +1,22 @@
+{
+  "name": "brie-todo",
+  "version": "1.0.0",
+  "description": "Collab between Brie and Chad",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Briezilla-inc/brie-todo.git"
+  },
+  "author": "Chad Hinds and Gabriela Cardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Briezilla-inc/brie-todo/issues"
+  },
+  "homepage": "https://github.com/Briezilla-inc/brie-todo#readme",
+  "dependencies": {
+    "mongoose": "^5.9.21"
+  }
+}
