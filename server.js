@@ -1,10 +1,10 @@
 // Express let's you create routes on the backend. We always have to require it in our server file first
 const express = require('express');
-// dotenv allows us to create global variables for our ports. it stands for `. environment`
+// dotenv allows us to create global variables for our ports. It stands for `. environment`
 const dotenv  = require('dotenv')
 const colors = require('colors')
 const morgan = require('morgan')
-//This points dotenv to our config file so it can have access to the stuff in there
+//This line points dotenv to our config file so it can have access to the stuff in there
 dotenv.config({path: './config/config.env'})
 const todos = require('./routes/todos')
 
