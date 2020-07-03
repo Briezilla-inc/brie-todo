@@ -1,6 +1,7 @@
 // This file has the routes related to todos
 const express = require('express')
 const router = express.Router();
+// Import the todo methods from the controllers folder
 const { getTodos, addTodo, deleteTodo } = require('../controllers/todos')
 
 // When the '/' route is hit, call the getTodos function from controllers folder
