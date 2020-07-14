@@ -1,21 +1,31 @@
 {
-  "name": "ironplate",
+  "name": "brie-todo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Collab between Brie and Chad",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "echo --- preinstall --- && cd backend && npm install && cd ../frontend && npm install && npm run build && cd ..",
-    "start": "echo --- start --- && cd backend && npm start"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FTWD-OCT-2019/ironplate.git"
+    "url": "git+https://github.com/Briezilla-inc/brie-todo.git"
   },
-  "author": "",
+  "author": "Chad Hinds and Gabriela Cardo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FTWD-OCT-2019/ironplate/issues"
+    "url": "https://github.com/Briezilla-inc/brie-todo/issues"
   },
-  "homepage": "https://github.com/FTWD-OCT-2019/ironplate#readme"
+  "homepage": "https://github.com/Briezilla-inc/brie-todo#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.21",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
 }
