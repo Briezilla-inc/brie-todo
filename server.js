@@ -7,6 +7,8 @@ const morgan = require('morgan')
 
 //This line right here points dotenv to our config file so it can have access to the stuff in there
 dotenv.config({path: './config/config.env'})
+dotenv.config({ path: './config/mongo.env' })
+
 const todos = require('./routes/todos')
 
 //Here we iniatalize express and save it to a variable named 'app'
