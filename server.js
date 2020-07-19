@@ -4,7 +4,7 @@ const express = require('express');
 const dotenv  = require('dotenv')
 const colors = require('colors')
 const morgan = require('morgan')
-//This line points dotenv to our config file so it can have access to the stuff in there
+//This line right here points dotenv to our config file so it can have access to the stuff in there
 dotenv.config({path: './config/config.env'})
 const todos = require('./routes/todos')
 
