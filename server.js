@@ -11,9 +11,9 @@ const todos = require('./routes/todos')
 //Here we iniatalize express and save it to a variable named 'app'
 const app = express();
 
-// Connect to the todos route 
+// Connect server.js to the todos routes 
 app.use('/api/v1/todos', todos)
 
 const PORT = process.env.PORT || 5000;
-// connect to port 
+// connect and listen to a specific port 
 app.listen(PORT, console.log(`We connected on ${PORT}!`.yellow.bold))
