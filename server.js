@@ -4,12 +4,7 @@ const express = require('express');
 const dotenv  = require('dotenv')
 const colors = require('colors')
 const morgan = require('morgan')
-<<<<<<< HEAD
 // This line points dotenv to our config file so it can have access to the stuff in there
-=======
-
-//This line right here points dotenv to our config file so it can have access to the stuff in there
->>>>>>> 14285167a1375d528bb5819911541a4005b5e5b7
 dotenv.config({path: './config/config.env'})
 dotenv.config({ path: './config/mongo.env' })
 
@@ -24,14 +19,8 @@ app.use('/api/v1/todos', todos)
 // How to access the global variables
 const PORT = process.env.PORT || 5000;
 
-<<<<<<< HEAD
 // Connect to port 
 app.listen(PORT, console.log(`We connected on ${PORT}!`.yellow.bold));
 
 
 
-
-=======
-// connect and listen to a specific port!
-app.listen(PORT, console.log(`We connected on ${PORT}`.yellow.bold))
->>>>>>> 14285167a1375d528bb5819911541a4005b5e5b7
