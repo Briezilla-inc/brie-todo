@@ -1,16 +1,56 @@
-// This file has the methods that are going to be used to interact with todo items
+// This file has the methods that are going to be used to interact with todo database. NB: Mongoose methods return promises
+const Todo = require('../models/Todo');
 
-// Get all the todo items on route api/v1/todos
-exports.getTodos = (req,res, next) => {
-    res.send('GET all todos');
+// Get all the todo items on the route api/v1/todos
+exports.getTodos = async (req, res, next) => {
+    try{
+        const todoList = await Todo.find()
+
+        // return the list of todos
+        return res.json({
+            success: true,
+            count: todoList.length,
+            data: todoList
+        })
+    }
+    catch(err) {
+        return res.status(500).send({
+            success: false,
+            error: 'Server Error Bruv'
+        })
+    }
 }
 
 // ADD a todo item using post request
-exports.addTodo = (req, res, next) => {
-    res.send('add a todo!');
+exports.addTodo = async (req, res, next) => {
+   try{
+       const { text } = req.body;
+
+       const newTodo = await Todo.create(req.body)
+
+       return res.status(201).json({
+           success: true,
+           data: newTodo
+       })
+   }
+   catch(err) {
+     if(err.name === 'ValidationError'){
+            const messages = Object.values(err.errors).map(val => val.message);
+            return res.status(400).json({
+                success:false,
+                error: messages
+            })
+        }
+        else {
+         return res.status(500).send({
+             success: false,
+             error: 'Server Error Bruv'
+         })
+        }
+   }
 }
 
 // DELETE item by id
-exports.deleteTodo = (req, res, next) => {
+exports.deleteTodo = async (req, res, next) => {
     res.send('Delete todo item');
 }

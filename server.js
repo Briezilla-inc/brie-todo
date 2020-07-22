@@ -4,18 +4,19 @@ const express = require('express');
 const dotenv  = require('dotenv')
 const colors = require('colors')
 const morgan = require('morgan')
-// This line points dotenv to our config file so it can have access to the stuff in there
+const connectDB = require('./config/database')
 
-
-
-// This line right here points dotenv to our config file so it can have access to the stuff in there
+// This line right here points dotenv to our config file so it can have access to the stuff in the cofig files
 dotenv.config({path: './config/config.env'})
-// dotenv.config({ path: './config/mongo.env' })
+dotenv.config({ path: './config/mongo.env' })
 
-const todos = require('./routes/todos')
+const todos = require('./routes/todos');
+// Call the connectDB function that's in './config/database'
+connectDB()
 
 // Here we iniatalize express and save it to a variable named 'app'
 const app = express();
+app.use(express.json());
 
 // Connect server.js to the todos routes 
 app.use('/api/v1/todos', todos)
