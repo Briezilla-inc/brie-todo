@@ -1,4 +1,5 @@
 import React, { createContext, useReducer } from 'react';
+import AppReducer from './AppReducer';
 import axios from 'axios';
 
 const initialState = {
@@ -11,7 +12,7 @@ const initialState = {
 export const GlobalContext = createContext(initialState);
 
 // This Provider component will give state to all the components it wraps
-export const globalProvider = ({ children }) => {
+export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
     // Actions
@@ -65,5 +66,16 @@ export const globalProvider = ({ children }) => {
             })
         }
     }
+    return (
+        <GlobalContext value={{
+            todos: state.todos,
+            error: state.error,
+            loading: state.loading,
+            getTodos,
+            addTodo,
+            deleteTodo
+        }}>
 
+        </GlobalContext>
+    )
 }
