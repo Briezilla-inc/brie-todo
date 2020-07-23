@@ -50,7 +50,24 @@ exports.addTodo = async (req, res, next) => {
    }
 }
 
-// DELETE item by id
+// DELETE todo item by id
 exports.deleteTodo = async (req, res, next) => {
-    res.send('Delete todo item');
+    try {
+        //Find todo with a specified Id and delete
+        const todo = await Todo.findById(req.params.id)
+
+        if(!todo){
+            return res.status(404).json({
+                success: false,
+                error: 'That todo was not found'
+            })
+        }
+        await todo.remove()
+        return res.status(200).json({
+            success: true,
+            data: {}
+        })
+    } catch (err) {
+        
+    }
 }

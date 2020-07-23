@@ -4,6 +4,8 @@ const express = require('express');
 const dotenv  = require('dotenv')
 const colors = require('colors')
 const morgan = require('morgan')
+const cors = require('cors');
+
 const connectDB = require('./config/database')
 
 // This line right here points dotenv to our config file so it can have access to the stuff in the cofig files
@@ -17,6 +19,7 @@ connectDB()
 // Here we iniatalize express and save it to a variable named 'app'
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // Connect server.js to the todos routes 
 app.use('/api/v1/todos', todos)
