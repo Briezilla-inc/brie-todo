@@ -4,17 +4,17 @@ export default (state, action) => {
             return {
                 ...state,
                 loading: false,
-                transactions: action.payload
+                todos: action.payload
             }
         case 'DELETE_TODO':
             return {
                 ...state,
-                transactions: state.transactions.filter(transaction => transaction._id !== action.payload)
+                todos: state.todos.filter(todo => todo._id !== action.payload)
             }
         case 'ADD_TODO':
             return {
                 ...state,
-                transactions: [...state.transactions, action.payload]
+                todos: [...state.todos, action.payload]
             }
         case 'TRANSACTION_ERROR':
             return {
