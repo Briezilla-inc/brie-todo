@@ -67,7 +67,7 @@ export const GlobalProvider = ({ children }) => {
         }
     }
     return (
-        <GlobalContext value={{
+        <GlobalContext.Provider value={{
             todos: state.todos,
             error: state.error,
             loading: state.loading,
@@ -75,7 +75,7 @@ export const GlobalProvider = ({ children }) => {
             addTodo,
             deleteTodo
         }}>
-
-        </GlobalContext>
+            {children}
+        </GlobalContext.Provider>
     )
 }
