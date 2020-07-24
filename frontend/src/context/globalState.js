@@ -26,6 +26,7 @@ export const GlobalProvider = ({ children }) => {
         } catch(err) {
             dispatch({
                 type: 'TODO_ERROR',
+                // Use this to send an error alert 
                 payload: err.response.data.error
             })
         }

@@ -2,12 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TodoList from './Components/TodoList';
+import { GlobalProvider } from './context/globalState';
 
 function App() {
   return (
-    <div className="App">
-     <TodoList />
-    </div>
+    <GlobalProvider>
+     <div className="App">
+      <TodoList />
+      </div>
+     </GlobalProvider>
   );
 }
 

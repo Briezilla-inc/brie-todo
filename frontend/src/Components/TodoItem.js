@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 
-class TodoItem extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Todo Item</h1>
-            </div>
-        );
-    }
+const TodoItem = (props) =>{
+    
+    
+    return (
+        <li>
+            <h3>{props.todo}</h3>
+            <button>Remove</button>
+        </li>
+    );
 }
 
 export default TodoItem;
