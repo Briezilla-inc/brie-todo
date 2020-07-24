@@ -1,4 +1,5 @@
-import React, { useContext, GlobalContext } from 'react';
+import React, { useContext} from 'react';
+import { GlobalContext } from '../context/globalState';
 
 const TodoItem = (props) =>{
     const { deleteTodo } = useContext(GlobalContext);
@@ -6,7 +7,7 @@ const TodoItem = (props) =>{
     return (
         <li>
             <h3>{props.todo}</h3>
-            <button onClick={()=>deleteTodo(props.todo._id)}>Remove</button>
+            <button onClick={()=> deleteTodo(props.identifier)}>Remove</button>
         </li>
     );
 }

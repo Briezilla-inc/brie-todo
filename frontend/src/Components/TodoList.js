@@ -16,11 +16,12 @@ const TodoList = () => {
         <ul>
             {
             todos.map(todo => {
-                return <TodoItem key={todo._id} todo={todo.text}/>
+                return <TodoItem key={todo._id} todo={todo.text}  identifier={todo._id}/>
             })
             }
         </ul>
     );
+    // NB: identifier is the prop I used to identify and delete a specific todo
 }
 
 export default TodoList;
