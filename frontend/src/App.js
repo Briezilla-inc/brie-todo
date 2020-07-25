@@ -15,7 +15,7 @@ const App = ()=> {
           <button onClick={() => setToggle(true)}>Add a new todo item</button>
 
         {
-          toggle === true ? <AddTodo togglePass={setToggle}/> : null
+          toggle ? <AddTodo togglePass={setToggle}/> : null
         }
         </div>
       </GlobalProvider>
