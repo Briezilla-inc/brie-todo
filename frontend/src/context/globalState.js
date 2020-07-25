@@ -27,14 +27,14 @@ export const GlobalProvider = ({ children }) => {
             dispatch({
                 type: 'TODO_ERROR',
                 // Use this to send an error alert 
-                payload: err.response.data.error
+                payload: 'Something went wrong'
             })
         }
     }
 
     async function deleteTodo(id) {
         try {
-            await axios.delete(`http://localhost:5000/api/v1/todos${id}`)
+            await axios.delete(`http://localhost:5000/api/v1/todos/${id}`)
             dispatch({
                 type: 'DELETE_TODO',
                 payload: id

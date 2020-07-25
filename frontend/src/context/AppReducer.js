@@ -16,7 +16,7 @@ export default (state, action) => {
                 ...state,
                 todos: [...state.todos, action.payload]
             }
-        case 'TRANSACTION_ERROR':
+        case 'TODO_ERROR':
             return {
                 ...state,
                 error: action.payload

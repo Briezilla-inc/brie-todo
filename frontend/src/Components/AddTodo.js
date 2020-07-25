@@ -11,6 +11,7 @@ const AddTodo = (props) => {
 
         const newTodo = text
         addTodo(newTodo);
+        props.togglePass(false)
     }
 
     return (

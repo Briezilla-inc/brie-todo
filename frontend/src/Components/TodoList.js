@@ -2,13 +2,13 @@ import React, {useContext, useEffect } from 'react';
 import {GlobalContext} from '../context/globalState';
 import TodoItem from './TodoItem';
 
-// Holds the list on todos 
+// Holds the list of todos 
 const TodoList = () => {
     const { todos, getTodos } = useContext(GlobalContext)
     // Load todos when component gets rendered
     useEffect(() => {
         getTodos();
-        console.log('useEffect fired')
+        console.log('useEffect was fired')
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
