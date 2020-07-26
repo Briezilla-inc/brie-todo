@@ -9,7 +9,8 @@ const AddTodo = (props) => {
     const submit = e => {
         e.preventDefault();
 
-        const newTodo = text
+        const newTodo = {userEntry: text}
+
         addTodo(newTodo);
         props.togglePass(false)
     }
@@ -18,6 +19,7 @@ const AddTodo = (props) => {
         <>
             <form onSubmit={submit}>
                 <input value={text} onChange={e=> setText(e.target.value) } placeholder="Add a todo..."/>
+                <button>Add Todo</button>
             </form>
         </>
     )

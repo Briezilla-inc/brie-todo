@@ -26,9 +26,9 @@ exports.addTodo = async (req, res, next) => {
    try{
        const { text } = req.body;
 
-       const newTodo = await Todo.create(req.body)
+       const newTodo = await Todo.create(text)
 
-       return res.status(201).json({
+       return res.status(201).send({
            success: true,
            data: newTodo
        })

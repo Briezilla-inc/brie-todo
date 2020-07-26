@@ -42,7 +42,7 @@ export const GlobalProvider = ({ children }) => {
         } catch (err) {
             dispatch({
                 type: "TODO_ERROR",
-                payload: err.response.data.error
+                payload: 'I am garbage'
             })
         }
     }
@@ -50,8 +50,7 @@ export const GlobalProvider = ({ children }) => {
     async function addTodo(todo) {
         const config = {
             headers: {
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'application/json'            }
         }
         try {
             const res = await axios.post('http://localhost:5000/api/v1/todos', todo, config);
@@ -63,7 +62,7 @@ export const GlobalProvider = ({ children }) => {
         } catch(err){
             dispatch({
                 type: "TODO_ERROR",
-                payload: err.response.data.error
+                payload: 'I am garbage'
             })
         }
     }

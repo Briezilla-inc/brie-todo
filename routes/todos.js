@@ -5,7 +5,9 @@ const router = express.Router();
 const { getTodos, addTodo, deleteTodo } = require('../controllers/todos')
 
 // When the '/' route is hit, call the specific functions needed from controllers folder
-router.route('/').get(getTodos).post(addTodo)
+router.route('/').get(getTodos)
+
+router.route('/').post(addTodo)
 
 router.route('/:id').delete(deleteTodo)
 

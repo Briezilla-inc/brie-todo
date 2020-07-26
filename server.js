@@ -19,8 +19,12 @@ connectDB()
 // Here we iniatalize express and save it to a variable named 'app'
 const app = express();
 app.use(express.json());
-app.use(cors());
-
+app.use(
+    cors({
+        credentials: true,
+        origin: ["http://localhost:3000"]
+    })
+);
 // Connect server.js to the todos routes 
 app.use('/api/v1/todos', todos)
 
