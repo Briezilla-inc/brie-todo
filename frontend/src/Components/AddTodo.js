@@ -9,8 +9,11 @@ const AddTodo = (props) => {
     const submit = e => {
         e.preventDefault();
 
-        const newTodo = {userEntry: text}
-
+        const newTodo = {
+            text,
+            added: true
+        }
+        
         addTodo(newTodo);
         props.togglePass(false)
     }
