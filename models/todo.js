@@ -6,6 +6,7 @@ const TodoSchema = new mongoose.Schema({
       type: String,
       required: [true, 'Add item to list']
     },
+    added: Boolean,
   createdAt: {
     type: Date,
     default: Date.now

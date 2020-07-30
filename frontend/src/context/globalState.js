@@ -42,7 +42,7 @@ export const GlobalProvider = ({ children }) => {
         } catch (err) {
             dispatch({
                 type: "TODO_ERROR",
-                payload: 'I am garbage'
+                payload: 'Something went wrong'
             })
         }
     }
@@ -62,7 +62,7 @@ export const GlobalProvider = ({ children }) => {
         } catch(err){
             dispatch({
                 type: "TODO_ERROR",
-                payload: 'I am garbage'
+                payload: 'Something went wrong'
             })
         }
     }
