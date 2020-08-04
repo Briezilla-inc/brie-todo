@@ -24,8 +24,8 @@ const App = () => {
         }
 
         {/* FOOTER */}
-        <footer >
-          <h2 style={{ color: 'white' }} id="footer-text">Copyright © Chad Hinds and Gabriela Cardo {new Date().getFullYear()} - All Rights Reserved</h2>
+        <footer>
+          <h2 id="footer-text">Copyright © Chad Hinds and Gabriela Cardo {new Date().getFullYear()} - All Rights Reserved</h2>
 
           <section className="ass">
             <ul className="social-links">

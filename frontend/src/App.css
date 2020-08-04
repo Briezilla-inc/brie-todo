@@ -1,7 +1,7 @@
 @import "~antd/dist/antd.css";
 
 body {
-  background-color: #130f40;
+  background-color: #2d3436;
 }
 
 .App {
@@ -28,6 +28,8 @@ button {
 }
 
 footer {
+  background-color: white;
+  height: 35vh;
   margin-top: 3rem;
 }
 li {
