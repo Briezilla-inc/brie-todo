@@ -1,6 +1,6 @@
-import React, { useContext, useState,  } from 'react';
+import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../context/globalState';
-
+import { Button, Input } from 'antd';
 const AddTodo = (props) => {
     const [text, setText] = useState('');
 
@@ -13,7 +13,7 @@ const AddTodo = (props) => {
             text,
             added: true
         }
-        
+
         addTodo(newTodo);
         props.togglePass(false)
     }
@@ -21,8 +21,8 @@ const AddTodo = (props) => {
     return (
         <>
             <form onSubmit={submit}>
-                <input value={text} onChange={e=> setText(e.target.value) } placeholder="Add a todo..."/>
-                <button>Add Todo</button>
+                <Input size="small" value={text} onChange={e => setText(e.target.value)} placeholder="Add a todo..." />
+                <Button type="primary">Add Todo</Button>
             </form>
         </>
     )

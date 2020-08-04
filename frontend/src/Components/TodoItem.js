@@ -1,14 +1,17 @@
-import React, { useContext} from 'react';
+import React, { useContext } from 'react';
+import { Button, Card } from 'antd';
 import { GlobalContext } from '../context/globalState';
 
-const TodoItem = (props) =>{
+const TodoItem = (props) => {
     const { deleteTodo } = useContext(GlobalContext);
-    
+
     return (
-        <li>
-            <h3>{props.todo}</h3>
-            <button onClick={()=> deleteTodo(props.identifier)}>Remove</button>
-        </li>
+        <>
+            <Card className="todo-item">
+                <h3 >{props.todo}</h3>
+                <Button danger onClick={() => deleteTodo(props.identifier)}>Remove</Button>
+            </Card>
+        </>
     );
 }
 

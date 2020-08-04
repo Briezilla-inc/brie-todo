@@ -1,5 +1,5 @@
-import React, {useContext, useEffect } from 'react';
-import {GlobalContext} from '../context/globalState';
+import React, { useContext, useEffect } from 'react';
+import { GlobalContext } from '../context/globalState';
 import TodoItem from './TodoItem';
 
 // Holds the list of todos 
@@ -13,13 +13,13 @@ const TodoList = () => {
     }, []);
 
     return (
-        <ul>
+        <>
             {
-            todos.map(todo => {
-                return <TodoItem key={todo._id} todo={todo.text}  identifier={todo._id}/>
-            })
+                todos.map(todo => {
+                    return <TodoItem key={todo._id} todo={todo.text} identifier={todo._id} />
+                })
             }
-        </ul>
+        </>
     );
     // NB: identifier is the prop I used to identify and delete a specific todo
 }
