@@ -21,7 +21,7 @@ const AddTodo = (props) => {
     return (
         <>
             <form onSubmit={submit}>
-                <Input size="small" value={text} onChange={e => setText(e.target.value)} placeholder="Add a todo..." />
+                <Input style={{ width: "35%", textAlign: "center" }} value={text} onChange={e => setText(e.target.value)} placeholder="Add a todo..." />
                 <Button type="primary">Add Todo</Button>
             </form>
         </>

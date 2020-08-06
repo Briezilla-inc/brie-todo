@@ -8,8 +8,10 @@ const TodoItem = (props) => {
     return (
         <>
             <Card className="todo-item">
-                <h3 >{props.todo}</h3>
-                <Button danger onClick={() => deleteTodo(props.identifier)}>Remove</Button>
+                <h2><b>{props.todo}</b></h2>
+                <Button danger onClick={() => deleteTodo(props.identifier)} style={{ borderRadius: '4rem' }}>
+                    Remove
+                </Button>
             </Card>
         </>
     );
