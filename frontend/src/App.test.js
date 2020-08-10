@@ -6,7 +6,7 @@ import App from './App';
 // After you have rendered your React component(s), React Testing Library offers you different search functions to grab elements
 // Use these elements in your test assertions
 describe('App', () => {
-  test('renders App component that has buttons', () => {
+  test('renders App component that has some buttons', () => {
     render(<App />);
 
     expect(screen.getByRole('button')).toBeInTheDocument();

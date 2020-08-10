@@ -18,15 +18,15 @@ export const GlobalProvider = ({ children }) => {
     // Actions
     async function getTodos() {
         try {
-        const res = await axios.get('http://localhost:5000/api/v1/todos');
+            const res = await axios.get('http://localhost:5000/api/v1/todos');
             dispatch({
                 type: 'GET_TODOS',
                 payload: res.data.data
             });
-        } catch(err) {
+        } catch (err) {
             dispatch({
                 type: 'TODO_ERROR',
-                // Use this to send an error alert 
+                // Use this to send an error alert! 
                 payload: 'Something went wrong'
             })
         }
@@ -50,7 +50,8 @@ export const GlobalProvider = ({ children }) => {
     async function addTodo(todo) {
         const config = {
             headers: {
-                'Content-Type': 'application/json'            }
+                'Content-Type': 'application/json'
+            }
         }
         try {
             const res = await axios.post('http://localhost:5000/api/v1/todos', todo, config);
@@ -59,7 +60,7 @@ export const GlobalProvider = ({ children }) => {
                 type: 'ADD_TODO',
                 payload: res.data.data
             });
-        } catch(err){
+        } catch (err) {
             dispatch({
                 type: "TODO_ERROR",
                 payload: 'Something went wrong'

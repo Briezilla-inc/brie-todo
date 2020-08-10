@@ -15,7 +15,8 @@ const App = () => {
     <GlobalProvider>
       <div className="App">
         <TodoList />
-        <Button color=" primary" onClick={() => setToggle(true)} style={{ marginTop: '1rem' }}>
+        <Button color=" primary" onClick={() => setToggle(true)}
+          style={{ marginTop: '1rem', borderRadius: '4rem' }}>
           Add a new todo item
         </Button>
 
@@ -25,7 +26,7 @@ const App = () => {
 
         {/* FOOTER */}
         <footer>
-          <h2 id="footer-text">Copyright © Chad Hinds and Gabriela Cardo {new Date().getFullYear()} - All Rights Reserved</h2>
+          <h4 id="footer-text">Copyright © Chad Hinds and Gabriela Cardo {new Date().getFullYear()} - All Rights Reserved</h4>
 
           <section className="ass">
             <ul className="social-links">
