@@ -41,13 +41,13 @@ const App = () => {
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/chadrick-hinds" rel="noopener noreferrer" target="_blank">
-                  <LinkedinFilled />
+                <a href="https://github.com/chadhindsight" rel="noopener noreferrer" target="_blank">
+                  <GithubFilled />
                 </a>
               </li>
               <li>
-                <a href="https://github.com/chadhindsight" rel="noopener noreferrer" target="_blank">
-                  <GithubFilled />
+                <a href="https://www.linkedin.com/in/chadrick-hinds" rel="noopener noreferrer" target="_blank">
+                  <LinkedinFilled />
                 </a>
               </li>
             </ul>
