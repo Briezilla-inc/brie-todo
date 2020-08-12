@@ -1,6 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import addTodo from './Components/AddTodo';
+import { render, fireEvent, screen } from '@testing-library/react';
+import AddTodo from './Components/AddTodo';
 
 import App from './App';
 // After you have rendered your React component(s), React Testing Library offers you different search functions to grab elements
@@ -11,8 +11,9 @@ describe('App', () => {
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
-  test('should have placeholder', () => {
-    render(<addTodo placeholder="Add a todo..." />)
+  test('should have placeholder text', () => {
+    render(<AddTodo placeholder="Add a todo..." />)
     expect(screen.getByPlaceholderText("Add a todo...")).toBeInTheDocument();
+
   })
 });
