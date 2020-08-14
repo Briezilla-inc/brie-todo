@@ -4,7 +4,7 @@ const router = express.Router();
 // Import the todo methods from the controllers folder
 const { getTodos, addTodo, deleteTodo } = require('../controllers/todos')
 
-// When the '/' route is hit, call the specific functions needed from controllers folder
+// When the '/' route is hit, call the specific functions needed from controllers folder. CONTROLLAAA
 router.route('/').get(getTodos)
 
 router.route('/').post(addTodo)
