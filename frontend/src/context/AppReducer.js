@@ -1,4 +1,4 @@
-// This stuff tells state how it should update
+// This tells state how it should update
 export default (state, action) => {
     switch (action.type) {
         case 'GET_TODOS':
