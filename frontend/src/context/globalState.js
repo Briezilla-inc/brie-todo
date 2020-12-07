@@ -8,7 +8,7 @@ const initialState = {
     loading: true
 }
 
-// This creates context
+// This creates context! 
 export const GlobalContext = createContext(initialState);
 
 // This Provider component will give state to all the components it wraps
